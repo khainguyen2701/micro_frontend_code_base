@@ -1,12 +1,13 @@
-import { createModuleFederationConfig } from '@module-federation/rsbuild-plugin';
+import { createModuleFederationConfig } from "@module-federation/rsbuild-plugin";
 
 export default createModuleFederationConfig({
-  name: 'order_remotes',
+  name: "order_remotes",
   exposes: {
-    '.': './src/components/ProviderComponent.tsx',
+    ".": "./src/components/ProviderComponent.tsx",
+    "./css": "./src/App.css",
   },
   shared: {
     react: { singleton: true },
-    'react-dom': { singleton: true },
+    "react-dom": { singleton: true },
   },
 });

@@ -2,9 +2,9 @@ import React from "react";
 
 const Provider: React.FC = () => {
   return (
-    <div className="container">
-      <h1 className="title">Hello Module Federation 2.0</h1>
-    </div>
+    <h1 className="text-3xl font-bold text-blue-500">
+      Hello Module Federation 2.0
+    </h1>
   );
 };
 
