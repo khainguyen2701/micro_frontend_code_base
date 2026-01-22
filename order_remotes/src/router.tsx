@@ -1,4 +1,5 @@
 import App from "./App";
+import Provider from "./components/ProviderComponent";
 
 export const orderRouter = [
   {
@@ -11,7 +12,7 @@ export const orderRouter = [
       },
       {
         path: ":id",
-        element: <div>Order Detail</div>,
+        element: <Provider />,
         errorElement: <div>Order Detail Error</div>,
       },
     ],

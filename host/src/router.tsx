@@ -1,12 +1,8 @@
 import { lazy } from "react";
 
+import { orderRouter } from "order_remotes_app/router";
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import { orderRouter } from "order_remotes_app/router";
-
-const OrderRemotes = lazy(() => import("order_remotes_app"));
-
-console.log("orderRouter", orderRouter);
 
 const router = createBrowserRouter([
   {
@@ -18,7 +14,6 @@ const router = createBrowserRouter([
         path: "/orders",
         errorElement: <div>Order Remotes Error</div>,
         children: orderRouter as any,
-        
       },
     ],
   },

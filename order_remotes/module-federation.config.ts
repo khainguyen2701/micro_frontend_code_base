@@ -5,6 +5,7 @@ export default createModuleFederationConfig({
   exposes: {
     ".": "./src/App.tsx",
     "./router": "./src/router.tsx",
+    "./setAuthAdapter": "./src/store/shared/auth.adapter.ts",
   },
   shared: {
     react: {
@@ -36,6 +37,9 @@ export default createModuleFederationConfig({
     "react-router-dom": {
       singleton: true,
       requiredVersion: false,
+    },
+    zustand: {
+      singleton: true,
     },
   },
 });

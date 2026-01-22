@@ -17,7 +17,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.12.0",
-    "styled-components": "^6.3.8"
+    "styled-components": "^6.3.8",
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
     "@module-federation/rsbuild-plugin": "^0.22.0",

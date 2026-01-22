@@ -29,5 +29,8 @@ export default createModuleFederationConfig({
       singleton: true,
       requiredVersion: false,
     },
+    zustand: {
+      singleton: true,
+    },
   },
 });
