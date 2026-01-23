@@ -5,6 +5,8 @@ export default createModuleFederationConfig({
   remotes: {
     order_remotes_app:
       "order_remotes_app@http://localhost:3001/mf-manifest.json",
+    product_remotes_app:
+      "product_remotes_app@http://localhost:3002/mf-manifest.json",
   },
   shareStrategy: "loaded-first",
   shared: {
