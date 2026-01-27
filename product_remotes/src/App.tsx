@@ -1,9 +1,9 @@
-import Provider from "./components/ProviderComponent";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="content">
-      <Provider />
+      <Outlet />
     </div>
   );
 };

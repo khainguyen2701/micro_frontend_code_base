@@ -13,8 +13,12 @@ import { RouterProvider } from "react-router-dom";
 import router from "./router";
 import { theme } from "./theme";
 
-import { setAuthAdapter } from "order_remotes_app/setAuthAdapter";
 import { useAuthStore } from "./store/auth.store";
+import { authFunction } from "./mfe/loadRemote/store";
+
+const authModule = await authFunction;
+const setAuthAdapter =
+  typeof authModule === "function" ? authModule : authModule.setAuthAdapter;
 
 const rootEl = document.getElementById("root");
 if (rootEl) {

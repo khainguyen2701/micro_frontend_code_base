@@ -1,16 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 
-import { Suspense } from "react";
-import ProviderProducts from "./ProductRemote";
+import { Box } from "@mui/material";
 
 const App = () => {
   return (
     <div className="content">
-      <Suspense fallback={<div>Loading...</div>}>
-        <ProviderProducts />
-      </Suspense>
-      <Link to="/orders">Orders</Link>
+      <Box sx={{ display: "flex", gap: 2 }}>
+        <Link to="/orders" color="inherit">
+          Orders
+        </Link>{" "}
+        <Link to="/products" color="inherit">
+          Products
+        </Link>
+      </Box>
       <Outlet />
     </div>
   );
