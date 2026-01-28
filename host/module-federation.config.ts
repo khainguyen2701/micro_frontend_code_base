@@ -1,5 +1,5 @@
 import { createModuleFederationConfig } from "@module-federation/rsbuild-plugin";
-
+import path from "path";
 export default createModuleFederationConfig({
   name: "host",
   remotes: {
@@ -35,4 +35,7 @@ export default createModuleFederationConfig({
       singleton: true,
     },
   },
+  runtimePlugins: [
+    path.resolve(__dirname, "./src/mfe/plugins/custom_plugin.ts"),
+  ],
 });
