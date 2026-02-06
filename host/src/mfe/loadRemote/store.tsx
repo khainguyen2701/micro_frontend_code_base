@@ -15,6 +15,5 @@ export const authFunction = import("order_remotes_app/setAuthAdapter")
   })
   .catch((error) => {
     console.warn("[MF] setAuthAdapter load failed", error);
-
     return () => {};
   });

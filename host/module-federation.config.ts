@@ -7,6 +7,7 @@ export default createModuleFederationConfig({
       "order_remotes_app@http://localhost:3001/mf-manifest.json",
     product_remotes_app:
       "product_remotes_app@http://localhost:3002/mf-manifest.json",
+    libs: "libs@http://localhost:3003/mf-manifest.json",
   },
   shareStrategy: "loaded-first",
   shared: {
@@ -34,8 +35,12 @@ export default createModuleFederationConfig({
     zustand: {
       singleton: true,
     },
+    axios: {
+      singleton: true,
+    },
   },
   runtimePlugins: [
     path.resolve(__dirname, "./src/mfe/plugins/custom_plugin.ts"),
+    path.join(__dirname, "./src/mfe/plugins/retry.ts"),
   ],
 });
